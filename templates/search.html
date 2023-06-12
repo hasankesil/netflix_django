@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+{% include "includes/_navbar1.html" %}
+<div class="container my-5">
+    <div class="row">
+        {% for i in filmler %}
+        <div class="col-md-2 col-4 mt-1">
+            <a href="video.html">
+                <img src="{{i.resim.url}}" class="w-100" alt="" />
+            </a>
+            <p class="text-light text-center mt-2">{{i.isim}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
